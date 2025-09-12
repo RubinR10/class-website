@@ -212,16 +212,7 @@ If there are any changes that I can make this course more accessible to you, I a
 </p>
 
 <h2>Calendar</h2>
-<dl>
-  <dt>Week 1</dt><dd>Introduction</dd>
-  <dt>Weeks 2&ndash;4</dt><dd>Algebraic objects</dd>
-  <dt>Weeks 5&ndash;7</dt><dd>Ring theory and field theory</dd>
-  <dt>Weeks 8&ndash;10</dt><dd>Galois theory</dd>
-  <dt>Weeks 11&ndash;13</dt><dd>Group representation theory</dd>
-  <dt>Weeks 14&ndash;15</dt><dd>Group projects and presentations</dd>
-</dl>
 
-<!-- Week 1 -->
 <table class="weekly-calendar">
   <tr>
     <td rowspan="2">1</td>
@@ -247,18 +238,25 @@ If there are any changes that I can make this course more accessible to you, I a
   <tr>
     <td style="display:none"></td>
     <td>September 3rd</td>
-    <td><i>Homework 0 due on Thursday, September 4th at 8:00PM on Gradescope.</i></td>
+    <td>
+      What is proof?</br>
+      <i>Homework 0 due on Thursday, September 4th at 8:00PM on Gradescope.</i>
+    </td>
   </tr>
 
   <tr>
     <td rowspan="2">3</td>
     <td>September 8th</td>
-    <td></td>
+    <td>Proof by induction</td>
   </tr>
   <tr>
     <td style="display:none"></td>
     <td>September 10th</td>
-    <td><i>Homework 1 due on Thursday, September 11th at 8:00PM on Gradescope.</i></td>
+    <td>
+      Strong induction
+      </br>
+      <i>Homework 1 due on Thursday, September 11th at 8:00PM on Gradescope.</i>
+    </td>
   </tr>
 
   <tr>
