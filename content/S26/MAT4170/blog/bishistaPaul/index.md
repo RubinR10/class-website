@@ -12,20 +12,20 @@ A Brief Introduction to Evolution Algebras
 ========================
 Remember Punnett Squares from high school biology? Punnett squares are a simple way of describing inheritance from parent to offspring. We use these to predict genotype(the genetics) and the phenotype(how an organism looks) based on looking at specific genes from parents.
 
-$$ \begin{matrix} 
-  \hline
-   & R & r \\ 
-  \hline
-  W & Rw & Wr \\ 
-  \hline
-  w & Rw & rw \\ 
-  \hline
-\end{matrix}
+$$ \\begin{matrix}
+  \\hline
+   & R & r \\\\
+  \\hline
+  W & Rw & Wr \\\\
+  \\hline
+  w & Rw & rw \\\\
+  \\hline
+\\end{matrix}
  $$
 
-From these Punnett squares, we can make parallels to a monoid, which is similar to a group but without inverses. Using Punnett squares, you can combine alleles, which is our operation. We can make an identity element, which is not adding an element. That being said, associativity doesn't really exist in genetics. Instead, we have commutativity, where $rw = wr$, $Rw = wR$, etc. 
+From these Punnett squares, we can make parallels to a monoid, which is similar to a group but without inverses. Using Punnett squares, you can combine alleles, which is our operation. We can make an identity element, which is not adding an element. That being said, associativity doesn't really exist in genetics. Instead, we have commutativity, where $rw = wr$, $Rw = wR$, etc.
 
-Expanding on these ideas, we can make an evolution algebra, which are a set of algebras which are not associative in general but are commutative. Our binary operation will be referred to as multiplication, but is the same as our Punnett square operation. 
+Expanding on these ideas, we can make an evolution algebra, which are a set of algebras which are not associative in general but are commutative. Our binary operation will be referred to as multiplication, but is the same as our Punnett square operation.
 
 Definition
 -----------
@@ -35,14 +35,14 @@ This is a pretty dense definition, but we'll focus on a few key parts to unpack:
 
 
 **What does $e_i * e_j = 0$ when $i \neq j$ mean in our genetics example?**
-We are trying to model how one element, $e_i$, "produces" other elements in the set, modelled e_k. So, we don't care about interactions between $e_i$ and other elements in the set. 
+We are trying to model how one element, $e_i$, "produces" other elements in the set, modelled e_k. So, we don't care about interactions between $e_i$ and other elements in the set.
 
-**What is that "a" element?** $a_{ki}$ is a real number that represents the probability of offspring genotypes resulting from self reproduction of type i. 
+**What is that "a" element?** $a_{ki}$ is a real number that represents the probability of offspring genotypes resulting from self reproduction of type i.
 
 **What does the basis represent?** The basis is a set of pure genetic types to track. Using our example from above, our basis would be ${e_1, e_2, e_3, e_4}$, which would encode *R*, *r*, *W*, and *w*. Once we pick a basis, we can represent any population is a linear combination of the basis and compute evolution over generations by repeatedly applying the multiplication.
 
 Let's connect this to our example from above:
-Suppose we have two alleles *W*, *w*, *R*, *r* with basis elements $e_1, e_2, e_3, e_4$. Let's define an evolution algebra as: 
+Suppose we have two alleles *W*, *w*, *R*, *r* with basis elements $e_1, e_2, e_3, e_4$. Let's define an evolution algebra as:
 
 $e_1^2 = 0.4e_1 + 0.2e_2 + 0.25e_3 + 0.15e_4$
 
@@ -105,11 +105,11 @@ In biology, $g_0$ is called a transitory state, which will disappear after some 
 
 We can then make an evolution algebra to denote this:
 
-$g_0^2 = \pi g_0 + \alpha g_1 + \beta g_2,$ 
+$g_0^2 = \pi g_0 + \alpha g_1 + \beta g_2,$
 
-$g_1^2 = g_1$ 
+$g_1^2 = g_1$
 
-$g_2^2 = g_2$ 
+$g_2^2 = g_2$
 
 Lets look at what these equations tell us:
 
@@ -120,31 +120,46 @@ When $g_1$ splits, it only carries $g_1$ genes, and the same follows for $g_2.$
 ### Computer Simulation
 We will do two simulations. First, us assume that $\pi = 0.33, \alpha = 0.34, \beta = 0.3$. Using Markov Chain simulation in R, we end up with these graphs over 10 generations:
 
-**g0**
-<img width="400" height="400" alt="g0_equal" src="‎Screenshot 2026-05-01 100141.png" />
-
-**g1**
-<img width="400" height="400" alt="g1_equal" src="Screenshot 2026-05-01 100213.png" />
-
-**g2**
-<img width="400" height="400" alt="g2_equal" src="‎Screenshot 2026-05-01 100233.png" />
+<figure>
+  <div class="grid three-column">
+    <figure>
+      <img width="400" height="400" alt="g0_equal" src="g0_equal.png" />
+      <figcaption>\( g_0 \)</figcaption>
+    </figure>
+    <figure>
+      <img width="400" height="400" alt="g1_equal" src="g1_equal.png" />
+      <figcaption>\( g_1 \)</figcaption>
+    </figure>
+    <figure>
+      <img width="400" height="400" alt="g2_equal" src="g2_equal.png" />
+      <figcaption>\( g_2 \)</figcaption>
+    </figure>
+  </div>
+</figure>
 
 These graphs show that $g_0$ approaches 0 by around 5 generations, and the same happens for $g_1$ and $g_2.$
 
 Now, let us assume a much more dramatic probability distribution, where $\pi = 0.70, \alpha = 0.25, \beta = 0.05$. Using Markov Chain simulation in R, we end up with these graphs over 10 generations:
 
-**g0**
-<img width="400" height="400" alt="g0_70%" src="Screenshot 2026-05-01 100357.png" />
-
-**g1**
-<img width="400" height="400" alt="g1_20%" src="Screenshot 2026-05-01 100405.png" />
-
-**g2**
-<img width="400" height="400" alt="g2_5%" src="Screenshot 2026-05-01 100424.png" />
+<figure>
+  <div class="grid three-column">
+  <figure>
+    <img alt="g0_70%" src="g0_70.png" />
+    <figcaption>$g_0$</figcaption>
+  </figure>
+  <figure>
+    <img alt="g1_20%" src="g1_20.png" />
+    <figcaption>$g_1$</figcaption>
+  </figure>
+  <figure>
+    <img alt="g2_5%" src="g2_05.png" />
+    <figcaption>$g_2$</figcaption>
+  </figure>
+</figure>
 
 Within 10 generations, $g_0$ still approaches 0 relatively quickly.
 
-Through these equations, we can go through different examples of what we can predict to happen. For example, what if $g_2$ dies out immediately? We would set $g_2^2 = 0.$ Also, if $g_2$ were to mutate back to $g_1$, we would set $g_2^2 = \mu g_1 + g_2^2$, where $\mu$ is nonzero. 
+Through these equations, we can go through different examples of what we can predict to happen. For example, what if $g_2$ dies out immediately? We would set $g_2^2 = 0.$ Also, if $g_2$ were to mutate back to $g_1$, we would set $g_2^2 = \mu g_1 + g_2^2$, where $\mu$ is nonzero.
 
 These equations model what we expect to see in biological systems! While underlying biological mechanisms are unknown, these evolution algebras can help us understand them better.
 
@@ -152,7 +167,7 @@ These equations model what we expect to see in biological systems! While underly
 Let's go through another example:
 A number of human disorders occur from mutations with human mitochondrial DNA. These patients usually harbor a number of wild type mitochondrial genomes(wtmtDNA)(think: normal genomes), a population of specific partially deleted genome($\delta$ mtDNA), and a partial duplication DNA(dupmtDNA.)
 
-From long term tissue culture samples, it has been found that we expect to see **80% dupmtDNA, 10% wtmtDNA, and 10% ∆-mtDNA.** 
+From long term tissue culture samples, it has been found that we expect to see **80% dupmtDNA, 10% wtmtDNA, and 10% ∆-mtDNA.**
 
 Through this, we can define a series of equations:
 
@@ -160,17 +175,17 @@ Let:
 
 $g_0$ denote a triplasmy of dupmtDNA, wtmtDNA, $\delta$ mtDNA,
 
-$g_1$ denote a heteroplasmy of dupmtDNA and wtmtDNA, 
+$g_1$ denote a heteroplasmy of dupmtDNA and wtmtDNA,
 
-$g_2$ denote a heteroplasmy of dupmtDNA, and $\delta$ mtDNA, 
+$g_2$ denote a heteroplasmy of dupmtDNA, and $\delta$ mtDNA,
 
-$g_3$ denote a heteroplasmy of wtmtDNA and $\delta$ mtDNA, 
+$g_3$ denote a heteroplasmy of wtmtDNA and $\delta$ mtDNA,
 
-$g_4$ denote a homoplasmy of dupmtDNA, 
+$g_4$ denote a homoplasmy of dupmtDNA,
 
 $g_5$ denote a homoplasmy of wtmtDNA,
 
-$g_6$ denote a homoplasmy of $\delta$ mtDNA. 
+$g_6$ denote a homoplasmy of $\delta$ mtDNA.
 
 This implies our following evolution algebra:
 
