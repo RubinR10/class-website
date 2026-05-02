@@ -79,7 +79,7 @@ Now $B = - \frac{1}{2} R D_{ij}^{2} R$, implying that $B \approx RYY^{T}R$, wher
 [Jonathan Taylor](https://web.stanford.edu/class/stats305c/lectures/MDS.html)
 
 <div style="display: flex; gap: 10px;">
-  <img src="https://gist.github.com/user-attachments/assets/d85302b7-1796-40de-9ee8-a460c941a7a5" width="300">
+  <img src="https://github.com/RubinR10/class-website/blob/a092380976b0f845cb19537112b6cfdc12c2f095/RubinHassman/download.png" width="300">
   <img src="https://gist.github.com/user-attachments/assets/dee55645-397b-4a6e-a3c1-b7af8f2a846d" width="450">
 </div>
 The left is a 3D Model of a Swiss roll I constructed in Python, and the right is the Isomap of that manifold.
