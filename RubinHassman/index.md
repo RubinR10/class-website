@@ -85,8 +85,8 @@ Now $B = - \frac{1}{2} R D_{ij}^{2} R$, implying that $B \approx RYY^{T}R$, wher
 <model-viewer alt="Rainbow Swiss Roll from Mathematica" src="3D_Manifold (1) (1).glb"></model-viewer>
 
 <div style="display: flex; gap: 10px;">
-  <img src="https://github.com/RubinR10/class-website/blob/a092380976b0f845cb19537112b6cfdc12c2f095/RubinHassman/download.png" width="300">
-  <img src="https://github.com/RubinR10/class-website/blob/cf5f834e5933bbcdd03d81e5b709e11103d200e8/RubinHassman/Figure%202026-05-01%20185528.png" width="450">
+  <img src="download.png" alt="Plot of 3D Swiss Roll" width="300">
+  <img src="Figure 2026-05-01 185528.png" alt="Isomap of Swiss Roll" width="450">
 </div>
 The left is a plot of the Swiss roll I constructed in Python, and the right is the Isomap of that manifold I constructed in Python. 
 
