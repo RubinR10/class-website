@@ -8,8 +8,6 @@ term: S26
 layout: layouts/blog.njk
 ---
 
-# Topic: Manifold Learning with a Focus on Isomaps
-
 # What is a Manifold:
 
 An $n$-dimensional manifold is a topological surface that resembles a Euclidean space locally at each point, or rather, each point has a neighborhood that is homeomorphic to an open subset of the $n$-dimensional Euclidean space.
